@@ -82,7 +82,7 @@
 
 -(void)start{
     //Start the subscription timer
-    mTimeoutTimer = [NSTimer timerWithTimeInterval:60.0 target:self selector:@selector(ManageSubscriptionTimeouts:) userInfo:nil repeats:YES];
+    mTimeoutTimer = [NSTimer timerWithTimeInterval:60.0 target:self selector:@selector(subscriptionTimeOutTimer) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:mTimeoutTimer forMode:NSDefaultRunLoopMode];
 }
 -(void)stop{
@@ -90,7 +90,10 @@
     [mTimeoutTimer invalidate];
 }
 
-
+- (void)subscriptionTimeOutTimer
+{
+    [self performSelectorInBackground:@selector(ManageSubscriptionTimeouts:) withObject:nil];
+}
 
 -(NSString*)Subscribe:(UPnPEvents_Observer*)subscriber{
     //Send Event subscription over HTTP
@@ -175,7 +178,7 @@
     if([method caseInsensitiveCompare:@"NOTIFY"] == NSOrderedSame ){
         ret = YES;
     }
-
+    NSLog(@"method:%@;return:%d", method, ret);
     return ret;
 }
 
@@ -224,6 +227,7 @@
         parserret = [parser parseFromData:body];
     }
 
+    NSLog(@"parserret:%d;body:%@;cut:%d", parserret, body, cut);
     if(parserret == 0){
         //ok
         //
