@@ -25,12 +25,17 @@
 -(int)Play:(NSMutableArray*)playList position:(NSInteger)position;
 -(int)Play:(NSInteger)position;
 
+- (void)playWithUri:(NSString *)uri;
+
 //BasicUPnPServiceObserver
 -(void)UPnPEvent:(BasicUPnPService*)sender events:(NSDictionary*)events;
 
 @property (strong) MediaServer1Device *server;
 @property (weak, readonly) MediaRenderer1Device *renderer;
 @property (strong) NSMutableArray *playlist;
+
+- (void)getTransportInfo;
+- (void)getPositionInfo;
 
 @end
 

@@ -19,9 +19,55 @@
 		155126E613BF4AF90042DEBF /* FolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155126E413BF4AF90042DEBF /* FolderViewController.m */; };
 		155126E713BF4AF90042DEBF /* FolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155126E513BF4AF90042DEBF /* FolderViewController.xib */; };
 		155AC14F1502F87C00817BD9 /* PlayBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 155AC14E1502F87C00817BD9 /* PlayBack.m */; };
-		4EB7CE6E1C1AD57D00768FF0 /* upnpx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB7CE6D1C1AD57D00768FF0 /* upnpx.framework */; };
+		7C0AF7C31D9BBFC30066AC72 /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0AF7C21D9BBFC30066AC72 /* OrderedDictionary.m */; };
+		7C9C11EB1D901E17001592ED /* libupnpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9C11D81D901CDB001592ED /* libupnpx.a */; };
 		9E3614631941520800CBF65D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3614621941520800CBF65D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C9C11D71D901CDB001592ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C9C11CE1D901CDB001592ED /* upnpx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 15BAC4F4132C22BA00F5C41A;
+			remoteInfo = "upnpx iOS";
+		};
+		7C9C11D91D901CDB001592ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C9C11CE1D901CDB001592ED /* upnpx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4E85E7481C1AC6E8004601E0;
+			remoteInfo = "upnpx tvOS";
+		};
+		7C9C11DB1D901CDB001592ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C9C11CE1D901CDB001592ED /* upnpx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4E85E8041C1AC7FF004601E0;
+			remoteInfo = "upnpx Mac";
+		};
+		7C9C11DD1D901CDB001592ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C9C11CE1D901CDB001592ED /* upnpx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4EB7CC2C1C1ACA0C00768FF0;
+			remoteInfo = "upnpx (iOS)";
+		};
+		7C9C11DF1D901CDB001592ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C9C11CE1D901CDB001592ED /* upnpx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4EB7CDA71C1AD0D300768FF0;
+			remoteInfo = "upnpx (tvOS)";
+		};
+		7C9C11E11D901CDB001592ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C9C11CE1D901CDB001592ED /* upnpx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4EB7CE651C1AD16000768FF0;
+			remoteInfo = "upnpx (Mac)";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		15055E3D13913F0A003DE49F /* upnpxdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = upnpxdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +89,9 @@
 		155126E513BF4AF90042DEBF /* FolderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FolderViewController.xib; sourceTree = "<group>"; };
 		155AC14D1502F87C00817BD9 /* PlayBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayBack.h; sourceTree = "<group>"; };
 		155AC14E1502F87C00817BD9 /* PlayBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayBack.m; sourceTree = "<group>"; };
-		4EB7CE6D1C1AD57D00768FF0 /* upnpx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = upnpx.framework; path = "../upnpx/build/Debug-iphoneos/upnpx.framework"; sourceTree = "<group>"; };
+		7C0AF7C11D9BBFC30066AC72 /* OrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderedDictionary.h; sourceTree = "<group>"; };
+		7C0AF7C21D9BBFC30066AC72 /* OrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderedDictionary.m; sourceTree = "<group>"; };
+		7C9C11CE1D901CDB001592ED /* upnpx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = upnpx.xcodeproj; path = ../../upnpx/upnpx.xcodeproj; sourceTree = "<group>"; };
 		9E3614621941520800CBF65D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EB7CE6E1C1AD57D00768FF0 /* upnpx.framework in Frameworks */,
+				7C9C11EB1D901E17001592ED /* libupnpx.a in Frameworks */,
 				15055E4213913F0A003DE49F /* UIKit.framework in Frameworks */,
 				15055E4413913F0A003DE49F /* Foundation.framework in Frameworks */,
 				15055E4613913F0A003DE49F /* CoreGraphics.framework in Frameworks */,
@@ -83,7 +131,6 @@
 		15055E4013913F0A003DE49F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4EB7CE6D1C1AD57D00768FF0 /* upnpx.framework */,
 				15055E4113913F0A003DE49F /* UIKit.framework */,
 				15055E4313913F0A003DE49F /* Foundation.framework */,
 				15055E4513913F0A003DE49F /* CoreGraphics.framework */,
@@ -94,6 +141,7 @@
 		15055E4713913F0A003DE49F /* upnpxdemo */ = {
 			isa = PBXGroup;
 			children = (
+				7C0AF7C01D9BBFC30066AC72 /* OrderedDictionary */,
 				15055E5013913F0A003DE49F /* upnpxdemoAppDelegate.h */,
 				15055E5113913F0A003DE49F /* upnpxdemoAppDelegate.m */,
 				15055E5313913F0A003DE49F /* MainWindow.xib */,
@@ -106,6 +154,7 @@
 				155126E513BF4AF90042DEBF /* FolderViewController.xib */,
 				155AC14D1502F87C00817BD9 /* PlayBack.h */,
 				155AC14E1502F87C00817BD9 /* PlayBack.m */,
+				7C9C11CE1D901CDB001592ED /* upnpx.xcodeproj */,
 			);
 			path = upnpxdemo;
 			sourceTree = "<group>";
@@ -119,6 +168,28 @@
 				15055E4E13913F0A003DE49F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7C0AF7C01D9BBFC30066AC72 /* OrderedDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				7C0AF7C11D9BBFC30066AC72 /* OrderedDictionary.h */,
+				7C0AF7C21D9BBFC30066AC72 /* OrderedDictionary.m */,
+			);
+			path = OrderedDictionary;
+			sourceTree = "<group>";
+		};
+		7C9C11CF1D901CDB001592ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C9C11D81D901CDB001592ED /* libupnpx.a */,
+				7C9C11DA1D901CDB001592ED /* libupnpx.a */,
+				7C9C11DC1D901CDB001592ED /* libupnpx.a */,
+				7C9C11DE1D901CDB001592ED /* upnpx.framework */,
+				7C9C11E01D901CDB001592ED /* upnpx.framework */,
+				7C9C11E21D901CDB001592ED /* upnpx.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +220,11 @@
 			attributes = {
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Bruno Keymolen";
+				TargetAttributes = {
+					15055E3C13913F0A003DE49F = {
+						DevelopmentTeam = Y7X946633M;
+					};
+				};
 			};
 			buildConfigurationList = 15055E3713913F0A003DE49F /* Build configuration list for PBXProject "upnpxdemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -160,12 +236,63 @@
 			mainGroup = 15055E3213913F0A003DE49F;
 			productRefGroup = 15055E3E13913F0A003DE49F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7C9C11CF1D901CDB001592ED /* Products */;
+					ProjectRef = 7C9C11CE1D901CDB001592ED /* upnpx.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				15055E3C13913F0A003DE49F /* upnpxdemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7C9C11D81D901CDB001592ED /* libupnpx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libupnpx.a;
+			remoteRef = 7C9C11D71D901CDB001592ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7C9C11DA1D901CDB001592ED /* libupnpx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libupnpx.a;
+			remoteRef = 7C9C11D91D901CDB001592ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7C9C11DC1D901CDB001592ED /* libupnpx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libupnpx.a;
+			remoteRef = 7C9C11DB1D901CDB001592ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7C9C11DE1D901CDB001592ED /* upnpx.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = upnpx.framework;
+			remoteRef = 7C9C11DD1D901CDB001592ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7C9C11E01D901CDB001592ED /* upnpx.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = upnpx.framework;
+			remoteRef = 7C9C11DF1D901CDB001592ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7C9C11E21D901CDB001592ED /* upnpx.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = upnpx.framework;
+			remoteRef = 7C9C11E11D901CDB001592ED /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		15055E3B13913F0A003DE49F /* Resources */ = {
@@ -190,6 +317,7 @@
 				15055E4F13913F0A003DE49F /* main.m in Sources */,
 				15055E5213913F0A003DE49F /* upnpxdemoAppDelegate.m in Sources */,
 				15055E5813913F0A003DE49F /* RootViewController.m in Sources */,
+				7C0AF7C31D9BBFC30066AC72 /* OrderedDictionary.m in Sources */,
 				155126E613BF4AF90042DEBF /* FolderViewController.m in Sources */,
 				155AC14F1502F87C00817BD9 /* PlayBack.m in Sources */,
 			);
@@ -267,12 +395,21 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = Y7X946633M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/upnpxdemo",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "upnpxdemo/upnpxdemo-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "upnpxdemo/upnpxdemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/upnpxdemo",
+				);
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-all_load",
@@ -294,11 +431,20 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = Y7X946633M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/upnpxdemo",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "upnpxdemo/upnpxdemo-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "upnpxdemo/upnpxdemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/upnpxdemo",
+				);
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-all_load",

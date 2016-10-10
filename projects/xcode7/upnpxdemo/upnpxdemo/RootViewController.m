@@ -31,7 +31,7 @@
     [db addObserver:self];
     
     //Optional; set User Agent
-    [[[UPnPManager GetInstance] SSDP] setUserAgentProduct:@"upnpxdemo/1.0" andOS:@"OSX"];
+    [[[UPnPManager GetInstance] SSDP] setUserAgentProduct:@"upnpxdemo/1.0" andOS:@"IOS"];
     
     
     //Search for UPnP Devices 
@@ -98,6 +98,13 @@
         [self.titleLabel setText:[device friendlyName]];
         MediaRenderer1Device *render = (MediaRenderer1Device*)device;
         [[PlayBack GetInstance] setRenderer:render];
+        
+        NSString *uri  = @"http://fs.ios.kugou.com/201607192013/691287f8248e8d080db68d54497b11fe/G061/M08/12/18/HZQEAFeFpeeAfj99AEG9j6MCjGM300.mp3";
+        uri = @"http://fs.ios.kugou.com/201609130726/bcf41834db6675c9c2c0bb1b88aaa741/G069/M03/0D/0D/hQ0DAFfVDTqAJNVlADBs6M-c8_U398.mp3";
+        uri = @"http://free.kuro.cn/mp3/bgmusic_64k/424/2924.mp3";
+        [[PlayBack GetInstance]playWithUri:uri];
+//        [self performSelector:@selector(getInfo) withObject:nil afterDelay:1];
+        [self performSelectorInBackground:@selector(getInfo) withObject:nil];
     }
 }
 
@@ -129,4 +136,12 @@
     [menuView performSelectorOnMainThread : @ selector(reloadData) withObject:nil waitUntilDone:YES];
 }
 
+- (void)getInfo
+{
+    while (TRUE) {
+        sleep(1);
+        [[PlayBack GetInstance]getTransportInfo];
+        [[PlayBack GetInstance]getPositionInfo];
+    }
+}
 @end

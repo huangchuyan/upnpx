@@ -16,10 +16,10 @@
 		15055E5513913F0A003DE49F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15055E5313913F0A003DE49F /* MainWindow.xib */; };
 		15055E5813913F0A003DE49F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15055E5713913F0A003DE49F /* RootViewController.m */; };
 		15055E5B13913F0A003DE49F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15055E5913913F0A003DE49F /* RootViewController.xib */; };
-		15063F1B1504F55600BC2ACD /* libupnpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15063F1A1504F55600BC2ACD /* libupnpx.a */; };
 		155126E613BF4AF90042DEBF /* FolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155126E413BF4AF90042DEBF /* FolderViewController.m */; };
 		155126E713BF4AF90042DEBF /* FolderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155126E513BF4AF90042DEBF /* FolderViewController.xib */; };
 		155AC14F1502F87C00817BD9 /* PlayBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 155AC14E1502F87C00817BD9 /* PlayBack.m */; };
+		7C9C11CB1D8EC26D001592ED /* libupnpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9C11CA1D8EC26D001592ED /* libupnpx.a */; };
 		9E3614631941520800CBF65D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3614621941520800CBF65D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -38,12 +38,12 @@
 		15055E5613913F0A003DE49F /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		15055E5713913F0A003DE49F /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		15055E5A13913F0A003DE49F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
-		15063F1A1504F55600BC2ACD /* libupnpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libupnpx.a; path = "../upnpx/build/Debug-iphonesimulator/libupnpx.a"; sourceTree = "<group>"; };
 		155126E313BF4AF90042DEBF /* FolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderViewController.h; sourceTree = "<group>"; };
 		155126E413BF4AF90042DEBF /* FolderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderViewController.m; sourceTree = "<group>"; };
 		155126E513BF4AF90042DEBF /* FolderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FolderViewController.xib; sourceTree = "<group>"; };
 		155AC14D1502F87C00817BD9 /* PlayBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayBack.h; sourceTree = "<group>"; };
 		155AC14E1502F87C00817BD9 /* PlayBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayBack.m; sourceTree = "<group>"; };
+		7C9C11CA1D8EC26D001592ED /* libupnpx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libupnpx.a; sourceTree = "<group>"; };
 		9E3614621941520800CBF65D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,7 +55,7 @@
 				15055E4213913F0A003DE49F /* UIKit.framework in Frameworks */,
 				15055E4413913F0A003DE49F /* Foundation.framework in Frameworks */,
 				15055E4613913F0A003DE49F /* CoreGraphics.framework in Frameworks */,
-				15063F1B1504F55600BC2ACD /* libupnpx.a in Frameworks */,
+				7C9C11CB1D8EC26D001592ED /* libupnpx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				9E3614621941520800CBF65D /* Default-568h@2x.png */,
-				15063F1A1504F55600BC2ACD /* libupnpx.a */,
+				7C9C11CA1D8EC26D001592ED /* libupnpx.a */,
 				15055E4713913F0A003DE49F /* upnpxdemo */,
 				15055E4013913F0A003DE49F /* Frameworks */,
 				15055E3E13913F0A003DE49F /* Products */,
@@ -271,7 +271,10 @@
 				GCC_PREFIX_HEADER = "upnpxdemo/upnpxdemo-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "upnpxdemo/upnpxdemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-all_load",
@@ -297,7 +300,10 @@
 				GCC_PREFIX_HEADER = "upnpxdemo/upnpxdemo-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "upnpxdemo/upnpxdemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-all_load",

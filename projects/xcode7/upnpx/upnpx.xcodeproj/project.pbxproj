@@ -25,7 +25,6 @@
 		15055EA11391E2C1003DE49F /* SoapActionsMessaging1.m in Sources */ = {isa = PBXBuildFile; fileRef = 15055E991391E2C1003DE49F /* SoapActionsMessaging1.m */; };
 		15055EA21391E2C1003DE49F /* TelephonyClient1Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 15055E9A1391E2C1003DE49F /* TelephonyClient1Device.m */; };
 		15055EA31391E2C1003DE49F /* TelephonyServer1Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 15055E9B1391E2C1003DE49F /* TelephonyServer1Device.m */; };
-		1541026413D2762A000894ED /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541026213D2762A000894ED /* OrderedDictionary.m */; };
 		154978C71393D863008A5BD4 /* BinaryLight1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 154978C51393D863008A5BD4 /* BinaryLight1Device.h */; };
 		154978C81393D863008A5BD4 /* DimmableLight1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 154978C61393D863008A5BD4 /* DimmableLight1Device.h */; };
 		1556AB241393DC480059635A /* BasicDeviceParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1556AB1C1393DC480059635A /* BasicDeviceParser.h */; };
@@ -172,10 +171,10 @@
 		15C44F0C132C3AF80013D453 /* StateVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F00132C3AF80013D453 /* StateVariable.h */; };
 		15C44F0D132C3AF80013D453 /* UPnPDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F01132C3AF80013D453 /* UPnPDB.h */; };
 		15C44F0E132C3AF80013D453 /* UPnPEventParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F02132C3AF80013D453 /* UPnPEventParser.h */; };
-		15C44F0F132C3AF80013D453 /* UPnPEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F03132C3AF80013D453 /* UPnPEvents.h */; };
+		15C44F0F132C3AF80013D453 /* UPnPEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F03132C3AF80013D453 /* UPnPEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15C44F3B132C45B60013D453 /* DeviceFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F2D132C45B50013D453 /* DeviceFactory.h */; };
 		15C44F3C132C45B60013D453 /* MediaPlaylist.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F2E132C45B50013D453 /* MediaPlaylist.h */; };
-		15C44F3D132C45B60013D453 /* MediaRenderer1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F2F132C45B50013D453 /* MediaRenderer1Device.h */; };
+		15C44F3D132C45B60013D453 /* MediaRenderer1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F2F132C45B50013D453 /* MediaRenderer1Device.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		15C44F3E132C45B60013D453 /* MediaServer1BasicObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F30132C45B60013D453 /* MediaServer1BasicObject.h */; };
 		15C44F3F132C45B60013D453 /* MediaServer1ContainerObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F31132C45B60013D453 /* MediaServer1ContainerObject.h */; };
 		15C44F40132C45B60013D453 /* MediaServer1Device.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F32132C45B60013D453 /* MediaServer1Device.h */; };
@@ -184,7 +183,7 @@
 		15C44F45132C45B60013D453 /* SoapActionsConnectionManager1.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F37132C45B60013D453 /* SoapActionsConnectionManager1.h */; };
 		15C44F46132C45B60013D453 /* SoapActionsContentDirectory1.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F38132C45B60013D453 /* SoapActionsContentDirectory1.h */; };
 		15C44F47132C45B60013D453 /* SoapActionsRenderingControl1.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F39132C45B60013D453 /* SoapActionsRenderingControl1.h */; };
-		15C44F48132C45B60013D453 /* UPnPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F3A132C45B60013D453 /* UPnPManager.h */; };
+		15C44F48132C45B60013D453 /* UPnPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 15C44F3A132C45B60013D453 /* UPnPManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E0A1E3D1C1AE8B800BB3B31 /* iphoneport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0A1E3C1C1AE8B800BB3B31 /* iphoneport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E0A1E3F1C1AE8CE00BB3B31 /* iphoneport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0A1E3E1C1AE8CE00BB3B31 /* iphoneport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E0A1E411C1AE8EA00BB3B31 /* iphoneport.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0A1E401C1AE8EA00BB3B31 /* iphoneport.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1703,6 +1702,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C44F3D132C45B60013D453 /* MediaRenderer1Device.h in Headers */,
+				15C44F0F132C3AF80013D453 /* UPnPEvents.h in Headers */,
+				15C44F48132C45B60013D453 /* UPnPManager.h in Headers */,
+				15C44F0D132C3AF80013D453 /* UPnPDB.h in Headers */,
 				15C44D9F132C30000013D453 /* basichttpobserver.h in Headers */,
 				15C44DA3132C30000013D453 /* basichttpserver.h in Headers */,
 				15C44DA5132C30000013D453 /* httpsession.h in Headers */,
@@ -1741,12 +1744,9 @@
 				15C44F0A132C3AF80013D453 /* SoapAction.h in Headers */,
 				15C44F0B132C3AF80013D453 /* SSDPDB_ObjC.h in Headers */,
 				15C44F0C132C3AF80013D453 /* StateVariable.h in Headers */,
-				15C44F0D132C3AF80013D453 /* UPnPDB.h in Headers */,
 				15C44F0E132C3AF80013D453 /* UPnPEventParser.h in Headers */,
-				15C44F0F132C3AF80013D453 /* UPnPEvents.h in Headers */,
 				15C44F3B132C45B60013D453 /* DeviceFactory.h in Headers */,
 				15C44F3C132C45B60013D453 /* MediaPlaylist.h in Headers */,
-				15C44F3D132C45B60013D453 /* MediaRenderer1Device.h in Headers */,
 				15C44F3E132C45B60013D453 /* MediaServer1BasicObject.h in Headers */,
 				15C44F3F132C45B60013D453 /* MediaServer1ContainerObject.h in Headers */,
 				15C44F40132C45B60013D453 /* MediaServer1Device.h in Headers */,
@@ -1755,7 +1755,6 @@
 				15C44F45132C45B60013D453 /* SoapActionsConnectionManager1.h in Headers */,
 				15C44F46132C45B60013D453 /* SoapActionsContentDirectory1.h in Headers */,
 				15C44F47132C45B60013D453 /* SoapActionsRenderingControl1.h in Headers */,
-				15C44F48132C45B60013D453 /* UPnPManager.h in Headers */,
 				15583F2F138F448E00A734E7 /* MediaServerBasicObjectParser.h in Headers */,
 				155840321391349900A734E7 /* DigitalSecurityCamera1Device.h in Headers */,
 				155840331391349900A734E7 /* InternetGateway2Device.h in Headers */,
@@ -2386,6 +2385,7 @@
 				4EB7CC281C1ACA0C00768FF0 /* Frameworks */,
 				4EB7CC291C1ACA0C00768FF0 /* Headers */,
 				4EB7CC2A1C1ACA0C00768FF0 /* Resources */,
+				7C0366651D9A885E004D37C2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -2492,6 +2492,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C0366651D9A885E004D37C2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${ACTION}\" = \"build\" ]\nthen\nINSTALL_DIR=${SRCROOT}/Products/${PROJECT_NAME}.framework\n\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\n\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework\n\n\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n#ditto \"${DEVICE_DIR}/Headers\" \"${INSTALL_DIR}/Headers\"\n\nlipo -create \"${DEVICE_DIR}/${PROJECT_NAME}\" \"${SIMULATOR_DIR}/${PROJECT_NAME}\" -output \"${INSTALL_DIR}/${PROJECT_NAME}\"\n\n#open \"${DEVICE_DIR}\"\n#open \"${SRCROOT}/Products\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15BAC4F0132C22BA00F5C41A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -2585,7 +2601,6 @@
 				15055EA11391E2C1003DE49F /* SoapActionsMessaging1.m in Sources */,
 				15055EA21391E2C1003DE49F /* TelephonyClient1Device.m in Sources */,
 				15055EA31391E2C1003DE49F /* TelephonyServer1Device.m in Sources */,
-				1541026413D2762A000894ED /* OrderedDictionary.m in Sources */,
 				FD65B9A41C78F35A00AA5E50 /* UPnPServiceConstantsConnectionManager1.m in Sources */,
 				15004517141298EA00ED553F /* MediaServer1ItemRes.m in Sources */,
 			);
@@ -3261,7 +3276,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = upnpx/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -3313,7 +3328,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = upnpx/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
