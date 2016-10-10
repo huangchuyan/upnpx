@@ -321,6 +321,7 @@ int SocketServer::ReadLoop(){
                     //Socket closed
                     connection->isActive = false;
                 }else if(FD_ISSET(thisSocket, &mReadFDS)){
+                    sleep(1);
                     len = ((SocketServerConnection*)*itConn)->ReadDataFromSocket(&pConnectionSender);
                     if(len <= 0){
                         //Socket closed
