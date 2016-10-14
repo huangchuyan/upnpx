@@ -107,7 +107,7 @@
 
 
 
-    NSString *callBack = [NSString stringWithFormat:@"<http://%@:%d/Event>", [server getIPAddress], [server getPort]];
+    NSString *callBack = [NSString stringWithFormat:@"<http://%@:%d/avtransportevent>", [server getIPAddress], [server getPort]];
 
     [urlRequest setValue:@"iOS UPnP/1.1 UPNPX/1.3.1" forHTTPHeaderField:@"USER-AGENT"];
     [urlRequest setValue:callBack forHTTPHeaderField:@"CALLBACK"];
