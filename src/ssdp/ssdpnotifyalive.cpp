@@ -122,7 +122,7 @@ int SSDPNotifyAlive::Process(struct sockaddr* sender, std::vector<SSDP_HTTP_HEAD
         }
         //end workaround
 
-
+        mDB->Unlock();
         //Inform the observers
         if(uuid.isdevice || uuid.isrootdevice){
             mDB->DeviceUpdate(device);
@@ -130,6 +130,10 @@ int SSDPNotifyAlive::Process(struct sockaddr* sender, std::vector<SSDP_HTTP_HEAD
             mDB->ServiceUpdate(device);
         }
 
+    }
+    else
+    {
+        mDB->Unlock();
     }
 
     //always update cache control
@@ -141,7 +145,7 @@ int SSDPNotifyAlive::Process(struct sockaddr* sender, std::vector<SSDP_HTTP_HEAD
 
     //printf("%s\n", device->uuid.c_str());
 
-    mDB->Unlock();
+    
 
 
     //printf("SSDPNotifyAlive\n");

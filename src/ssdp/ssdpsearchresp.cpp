@@ -130,7 +130,7 @@ int SSDPSearchResp::Process(struct sockaddr* sender, std::vector<SSDP_HTTP_HEADE
         }
         //end workaround
 
-
+        mDB->Unlock();
         //Inform the observers
         if(uuid.isdevice || uuid.isrootdevice){
             mDB->DeviceUpdate(device);
@@ -139,7 +139,10 @@ int SSDPSearchResp::Process(struct sockaddr* sender, std::vector<SSDP_HTTP_HEADE
         }
 
     }
-
+    else
+    {
+        mDB->Unlock();
+    }
     //always update cache control
     if(device != NULL && cache >= 0){
         mDB->UpdateCacheControl(uuid.uuid, uuid.uuidlen, cache);
@@ -147,7 +150,6 @@ int SSDPSearchResp::Process(struct sockaddr* sender, std::vector<SSDP_HTTP_HEADE
 
     //printf("%s\n", device->uuid.c_str());
 
-    mDB->Unlock();
 
 
 EXIT:
