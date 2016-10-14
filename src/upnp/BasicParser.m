@@ -85,6 +85,7 @@ static NSString *ElementStop = @"ElementStop";
 -(void)clearAllAssets{
     @synchronized(self) {
         [mAssets removeAllObjects];
+        [mElementStack removeAllObjects];
     }
 }
 
