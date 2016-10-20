@@ -80,6 +80,7 @@ private:
     struct ip_mreq mMreqU;
     std::vector<SSDPObserver*> mObservers;
     u8 mReadLoop;
+    bool mReadExist;
     pthread_t mReadThread;
     fd_set mExceptionFDS;
     fd_set mReadFDS;

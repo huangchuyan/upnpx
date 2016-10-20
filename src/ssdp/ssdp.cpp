@@ -42,7 +42,7 @@
 #include <string>
 #include <sstream>
 
-SSDP::SSDP():mMulticastSocket(INVALID_SOCKET), mUnicastSocket(INVALID_SOCKET), mReadLoop(0), mTTL(2), mOS("mac/1.0"), mProduct("upnpx/1.0"){
+SSDP::SSDP():mMulticastSocket(INVALID_SOCKET), mUnicastSocket(INVALID_SOCKET), mReadLoop(0), mTTL(2), mOS("mac/1.0"), mProduct("upnpx/1.0"), mReadExist(true){
     mDB = new SSDPDB();
     mDB->Start();
     mParser = new SSDPParser(mDB);
@@ -187,6 +187,10 @@ int SSDP::Start(){
     }
 
     ret = pthread_create(&mReadThread, &attr, SSDP::sReadLoop, (void*)this);
+    if (ret == 0) {
+        mReadLoop = 1;
+        mReadExist = false;
+    }
 
     pthread_attr_destroy(&attr);
 
@@ -206,7 +210,12 @@ EXIT:
 
 
 int SSDP::Stop(){
-    mReadLoop = 0;
+    if (mReadLoop == 1) {
+        mReadLoop = 0;
+        while (!mReadExist) {
+            usleep(10 * 1000);
+        }
+    }
     //@TODO: leave multicast groups
     if(mMulticastSocket > 0){
         close(mMulticastSocket);
@@ -308,7 +317,6 @@ std::string mProduct;
 
 int SSDP::ReadLoop(){
     int ret = 0;
-    mReadLoop = 1;
 
     struct timeval timeout;
     timeout.tv_sec = 5;
@@ -328,7 +336,7 @@ int SSDP::ReadLoop(){
         FD_ZERO(&mReadFDS);
         FD_ZERO(&mWriteFDS);
         FD_ZERO(&mExceptionFDS);
-        if (!mMulticastSocket) {
+        if (mMulticastSocket <= 0) {
             printf("Multicast socket failed!\n");
             break;
         }
@@ -337,7 +345,7 @@ int SSDP::ReadLoop(){
         FD_SET(mMulticastSocket, &mWriteFDS);
         FD_SET(mMulticastSocket, &mExceptionFDS);
 
-        if (!mUnicastSocket) {
+        if (mUnicastSocket <= 0) {
             printf("Multicast socket failed!\n");
             break;
         }
@@ -449,6 +457,7 @@ void* SSDP::sReadLoop(void* data){
 
     SSDP* pthis = (SSDP*)data;
     pthis->ReadLoop();
+    pthis->mReadExist = true;
 
     return NULL;
 }
