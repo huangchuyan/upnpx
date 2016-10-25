@@ -250,10 +250,30 @@ int SocketServer::ReadLoop(){
 
     listen(mServerSocket, mMaxConnections);
 
+    int loopTempCount = 0;
+    int seconds = 0;
     //Read UDP answers
     while(mReadLoop){
+        
+        //增加sleep，避免无阻塞循环引起cup过高
+        time_t timeSec = time(NULL);	 //获取1970.1.1至当前秒数time_t
+        struct tm *timeinfo = localtime(&timeSec);	//创建TimeDate,并转化为当地时间
+        if (timeinfo->tm_sec - seconds <= 1){//连续10循环少于等于1秒，休眠1秒
+            loopTempCount ++;
+            if (loopTempCount > 10) {
+                sleep(1);
+                loopTempCount = 0;
+                timeSec = time(NULL);
+                timeinfo = localtime(&timeSec);	//更新记录时间
+            }
+        }
+        else
+        {
+            loopTempCount = 0;
+        }
+        seconds = timeinfo->tm_sec;//记录时间，作为下次循环开始比较时间
+        
         //printf("SSDP::ReadLoop, enter 'select'\n");
-
         //(Re)set file descriptor
         FD_ZERO(&mReadFDS);
         FD_ZERO(&mExceptionFDS);
