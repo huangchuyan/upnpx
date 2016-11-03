@@ -28,7 +28,8 @@
 - (void)playWithUri:(NSString *)uri;
 
 //BasicUPnPServiceObserver
--(void)UPnPEvent:(BasicUPnPService*)sender events:(NSDictionary*)events;
+//-(void)UPnPEvent:(BasicUPnPService*)sender events:(NSDictionary*)events;
+- (void)basicUPnPService:(BasicUPnPService *)service receivedEvents:(NSDictionary *)events;
 
 @property (strong) MediaServer1Device *server;
 @property (weak, readonly) MediaRenderer1Device *renderer;
