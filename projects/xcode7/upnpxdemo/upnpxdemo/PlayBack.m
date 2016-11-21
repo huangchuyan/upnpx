@@ -198,8 +198,10 @@ static PlayBack *_playback = nil;
 }
 
 //BasicUPnPServiceObserver
--(void)UPnPEvent:(BasicUPnPService*)sender events:(NSDictionary*)events{
-    if(sender == [renderer avTransportService]){
+//-(void)UPnPEvent:(BasicUPnPService*)sender events:(NSDictionary*)events{
+- (void)basicUPnPService:(BasicUPnPService *)service receivedEvents:(NSDictionary *)events
+{
+    if(service == [renderer avTransportService]){
         NSString *newState = events[@"TransportState"];
         NSLog(@"event:%@",events);
         if([newState isEqualToString:@"STOPPED"]){
