@@ -51,7 +51,7 @@ public:
     int Parse(struct sockaddr* sender, u8* buf, u32 len);
     SSDP_TYPE GetType();
 private:
-    int ReadLine(u8 *buf, u32 len, u8 **restbuf, u32 *restlen);
+    int ReadLine(u8 *buf, s32 len, u8 **restbuf, s32 *restlen);
     SSDP_TYPE mType;
     vector<SSDP_HTTP_HEADER*> mHeaders;
     vector<SSDPMessage*> mMessages;

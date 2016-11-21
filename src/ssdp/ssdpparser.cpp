@@ -123,9 +123,9 @@ int SSDPParser::ReInit(){
 int SSDPParser::Parse(struct sockaddr* sender, u8* buf, u32 len){
     int linelen;
     u8* pos = buf;
-    u32 restlen = len;
+    s32 restlen = len;
     u8* newpos;
-    u32 newlen;
+    s32 newlen;
     u32 colon;
     int ret = 0;
 
@@ -201,7 +201,7 @@ SSDP_TYPE SSDPParser::GetType(){
  */
 
 
-int SSDPParser::ReadLine(u8 *buf, u32 len, u8 **restbuf, u32 *restlen){
+int SSDPParser::ReadLine(u8 *buf, s32 len, u8 **restbuf, s32 *restlen){
     int ret = 0;
 
     //Search the \r\n
@@ -213,7 +213,7 @@ int SSDPParser::ReadLine(u8 *buf, u32 len, u8 **restbuf, u32 *restlen){
     if(pos > buf){
         pos++;
         pos++;
-        *restlen = (unsigned int)((buf+len)-pos);
+        *restlen = (s32)((buf+len)-pos);
         *restbuf = pos;
         ret = (unsigned int)((pos-buf)-2);
     }else{
